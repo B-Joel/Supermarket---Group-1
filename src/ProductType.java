@@ -10,6 +10,7 @@ public enum ProductType {
 
     private double markup;
 
+
     ProductType(double markup) {
         this.markup = markup;
     }

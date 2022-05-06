@@ -3,9 +3,11 @@ import java.util.Scanner;
 
 public class Main {
     private static Object[][] produtos = new Object[10][10];
-    private static int contador = 0;
+    private static Object[][] carrinho = new Object[10][4];
 
-
+    private static Object[][] codigoQuantidade= new Object[10][2];
+    private static int contadorItens = 0;
+    private static int contadorVenda = 0;
     public static void main(String[] args) {
 
         do {
@@ -35,7 +37,7 @@ public class Main {
                 cadastrar();
                 break;
             case "2":
-                imprimir();
+                imprimirItens();
                 break;
             case "3":
                 listarPorTipos(2,3);
@@ -43,6 +45,21 @@ public class Main {
             case "4":
                 pesquisaProdutoPeloCodigo(1,3,7,8);
                 return;
+            case "5":
+                likeProduto();
+                break;
+            case "6":
+                carrinho();
+                break;
+            case "7":
+                break;
+            case "8":
+                break;
+            case "9":
+                System.out.println("ASTALAVISTA BABY");
+                System.exit(1);
+                break;
+
             default:
                 System.out.println("Opção inválida, informe novamente.");
         }
@@ -74,9 +91,9 @@ public class Main {
         marca = sc.nextLine();
 
 //        validação de cadastro ou compra
-        posicaoItens = buscaPosicao(identificador);
+        posicaoItens = validador(produtos, identificador, contadorItens);
         if(posicaoItens <0){
-            posicaoItens = contador;
+            posicaoItens = contadorItens;
             produtos[posicaoItens][ESTOQUE] = 0;
         }
         produtos[posicaoItens][IDENTIFICADOR] = identificador;
@@ -121,9 +138,9 @@ public class Main {
         atualizarEstoque(posicaoItens, QUANTIDADE, ESTOQUE);
         fluxoDeCaixa(posicaoItens, PRECO_CUSTO, QUANTIDADE, FLUXO_DE_CAIXA);
 
-        contador++;
+        contadorItens++;
 
-        if (contador == produtos.length) {
+        if (contadorItens == produtos.length) {
             produtos = (Object[][]) aumentarMatriz(produtos);
         }
 
@@ -145,11 +162,11 @@ public class Main {
     }
 
 
-    public static void imprimir() {
+    public static void imprimirItens() {
         System.out.println("Bem vindo ao Relatorio!");
-        System.out.println(contador);
+        System.out.println(contadorItens);
 
-        for (int i = 0; i < contador; i++) {
+        for (int i = 0; i < contadorItens; i++) {
             for (int j = 0; j < 9; j++) {
                 System.out.print(produtos[i][j] + "\t ");
             }
@@ -157,9 +174,9 @@ public class Main {
         }
     }
 
-    private static int buscaPosicao(String identificador) {
+    private static int validador(Object[][] lista, String validado, int contador) {
         for (int i = 0; i < contador; i++) {
-            if (produtos[i][0].equals(identificador)){
+            if (lista[i][0].equals(validado)){
                 contador--;
                 return i;
             }
@@ -264,7 +281,7 @@ public class Main {
     }
 
 
-    public static void listarPorTipos(int TIPO, int MARCA) {
+    public static void listarPorTipos(int TIPO, int MARCA){
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Bem vindo a Listagem!");
@@ -276,7 +293,7 @@ public class Main {
 
         String tipo = sc.nextLine().toUpperCase();
         System.out.printf("Listando produtos do tipo %s%n", tipo );
-        for (int i = 0; i < contador; i++) {
+        for (int i = 0; i < contadorItens; i++) {
             if (produtos[i][TIPO].equals(tipo)) {
                 System.out.print(produtos[i][MARCA] + " ");
             }
@@ -284,11 +301,11 @@ public class Main {
         System.out.println();
     }
 
-    private static Object aumentarMatriz(Object[][] produtos) {
-        Object[][] novoArray = new Object[produtos.length + 10][10];
-        for (int i = 0; i < produtos.length; i++) {
-            for (int j = 0; j < produtos[i].length; j++) {
-                novoArray[i][j] = produtos[i][j];
+    private static Object aumentarMatriz(Object[][] lista) {
+        Object[][] novoArray = new Object[lista.length + 10][lista[0].length];
+        for (int i = 0; i < lista.length; i++) {
+            for (int j = 0; j < lista[i].length; j++) {
+                novoArray[i][j] = lista[i][j];
             }
         }
         return novoArray;
