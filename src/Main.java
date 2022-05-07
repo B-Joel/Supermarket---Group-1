@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Main {
     private static Object[][] produtos = new Object[10][10];
-    private static Object[][] carrinho = new Object[10][4];
+    private static Object[][] carrinho = new Object[10][5];
 
     private static Object[][] codigoQuantidade= new Object[10][2];
     private static int contadorItens = 0;
@@ -95,6 +95,8 @@ public class Main {
         if(posicaoItens <0){
             posicaoItens = contadorItens;
             produtos[posicaoItens][ESTOQUE] = 0;
+        }else{
+            contadorItens--;
         }
         produtos[posicaoItens][IDENTIFICADOR] = identificador;
         produtos[posicaoItens][MARCA] = marca;
@@ -105,7 +107,7 @@ public class Main {
             try {
                 String tipo = sc.nextLine().toUpperCase();
                 produto = ProductType.valueOf(tipo);
-                produtos[posicaoItens][TIPO] = produto;
+                produtos[posicaoItens][TIPO] = produto.toString();
             }catch(Exception exception){
                 System.out.println("Erro, Digite novamente!");
             }
@@ -161,14 +163,18 @@ public class Main {
         }
     }
 
-
     public static void imprimirItens() {
         System.out.println("Bem vindo ao Relatorio!");
         System.out.println(contadorItens);
 
         for (int i = 0; i < contadorItens; i++) {
             for (int j = 0; j < 9; j++) {
-                System.out.print(produtos[i][j] + "\t ");
+                if(j==6){
+                    imprimirTempoFormatado(produtos[i][j]);
+                }
+                else {
+                    System.out.print(produtos[i][j] + "\t ");
+                }
             }
             System.out.println();
         }
@@ -177,7 +183,6 @@ public class Main {
     private static int validador(Object[][] lista, String validado, int contador) {
         for (int i = 0; i < contador; i++) {
             if (lista[i][0].equals(validado)){
-                contador--;
                 return i;
             }
         }
@@ -203,29 +208,26 @@ public class Main {
         if(a==-1){
             System.out.println("O Produto não existe");
         }else{
-            contadorItens++;
             System.out.printf("%nMarca: %s \t Nome:%s\t Preço: R$%s\t Estoque: %s \t", produtos[a][MARCA], produtos[a][NOME], produtos[a][PRECO], produtos[a][ESTOQUE]);
             }
         }
-
 
     private static int getPosicaoCodigo(Object[][]lista, int contador) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Digite o codigo identificador:");
         String identificador = sc.nextLine().toUpperCase();
-        if(identificador == "FIM"){
+        if(identificador.equals("FIM")){
             return -2;
         }
         return validador(lista, identificador, contador );
     }
 
-
-
     private static void carrinho(){
         final int CPF = 0;
         final int TIPO_CLIENTE = 1;
         final int QUANTIDADE_PRODUTOS = 2;
-        final int VALOR_PAGO = 3;
+        final int PREÇO = 3;
+        final int VALOR_A_PAGAR = 4;
         Scanner sc = new Scanner(System.in);
         String produtosComprados = null;
         String cpf;
@@ -258,39 +260,45 @@ public class Main {
 
         do{
             posicaoProdutoComprado = getPosicaoCodigo(produtos,contadorItens);
-            if(posicaoProdutoComprado==2){
+            if(posicaoProdutoComprado==-2){
                 break;
             }
             System.out.println("Quantos itens deseja comprar?");
             quantidadeProdutoComprado = sc.nextInt();
             nullViraZero(carrinho, contadorVenda, QUANTIDADE_PRODUTOS);
             carrinho[contadorVenda][QUANTIDADE_PRODUTOS] =(Double)carrinho[contadorVenda][QUANTIDADE_PRODUTOS] + quantidadeProdutoComprado ;
-            nullViraZero(carrinho, contadorVenda, VALOR_PAGO);
-            System.out.println(carrinho[contadorVenda]);
-            carrinho[contadorVenda][VALOR_PAGO] = (Double) carrinho[contadorVenda][VALOR_PAGO] +((Double)produtos[posicaoProdutoComprado][7]*quantidadeProdutoComprado);
+            nullViraZero(carrinho, contadorVenda, PREÇO);
+            carrinho[contadorVenda][PREÇO] = (Double) carrinho[contadorVenda][PREÇO] +((Double)produtos[posicaoProdutoComprado][7]*quantidadeProdutoComprado);
+            carrinho[contadorVenda][VALOR_A_PAGAR] = (Double)carrinho[contadorVenda][PREÇO] * tipoCliente.getDiscount();
+
+            if((int) produtos[posicaoProdutoComprado][8] >= quantidadeProdutoComprado) {
+                atualizarEstoque(posicaoProdutoComprado, (quantidadeProdutoComprado * -1), (int) produtos[posicaoProdutoComprado][8]);
+            }
+            else{
+                System.out.println("Quantidade insuficiente do produto");
+                continue;
+            }
+
             contadorVenda++;
-            System.out.println(carrinho[contadorVenda][VALOR_PAGO]);
             if (contadorVenda == carrinho.length) {
                 carrinho = (Object[][]) aumentarMatriz(carrinho);
             }
 
         }while(posicaoProdutoComprado!=-2);
+        for(int i=0;i<contadorVenda;i++) {
+            System.out.printf("%nCodigo: %s | Nome: %s | Quantidade: %s | Preco: %s | ValorPagar: %s%n", produtos[i][0], produtos[i][3], carrinho[i][QUANTIDADE_PRODUTOS], carrinho[i][PREÇO], carrinho[i][VALOR_A_PAGAR]);
 
-        System.out.printf("%nCodigo: %s | Nome: %s | Quantidade: %s | Preco: %s | ValorPagar: %s%n");
-
+        }
     }
 
-
-    public static void listarPorTipos(int TIPO, int MARCA){
+    public static void listarPorTipos(int TIPO, int NOME){
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Bem vindo a Listagem!");
         System.out.print("Escolhe o tipo de produto a ser filtrado - Opções: ");
-
         for (ProductType itens : ProductType.values()) {
             System.out.print(itens + " ");
         }
-
         String tipo = sc.nextLine().toUpperCase();
         System.out.printf("Listando produtos do tipo %s%n", tipo );
         for (int i = 0; i < contadorItens; i++) {

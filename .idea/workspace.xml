@@ -2,18 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="150c66bb-8409-47cf-af8d-2119e6d38af4" name="Changes" comment="First Commit">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ClientType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
-    <list id="4500dafc-1ad6-4375-a537-0f8e40002776" name="Changes by joel" comment="" />
+    <list id="b76aea0d-e23e-4fc0-bf0c-955ebde47444" name="Changes by joel" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
     <list id="83d39eee-8b44-466b-a8dc-686ae7f73d0b" name="Changes by Nicolau" comment="Changes by FUDEU">
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProductType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProductType.java" afterDir="false" />
     </list>
+    <list id="1bd051f8-59e0-48d6-a5bc-6d68a6daf079" name="Changes by Thomas Caron" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,32 +33,29 @@
   <component name="LineStatusTrackerManager">
     <file path="$PROJECT_DIR$/src/Main.java">
       <ranges>
-        <range start1="5" end1="6" start2="5" end2="6" changelist="83d39eee-8b44-466b-a8dc-686ae7f73d0b" />
-        <range start1="7" end1="8" start2="7" end2="10" changelist="83d39eee-8b44-466b-a8dc-686ae7f73d0b" />
-        <range start1="9" end1="9" start2="11" end2="12" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
-        <range start1="18" end1="23" start2="21" end2="33" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
-        <range start1="29" end1="30" start2="39" end2="40" changelist="83d39eee-8b44-466b-a8dc-686ae7f73d0b" />
-        <range start1="35" end1="35" start2="45" end2="46" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
-        <range start1="36" end1="36" start2="47" end2="62" changelist="83d39eee-8b44-466b-a8dc-686ae7f73d0b" />
-        <range start1="67" end1="68" start2="93" end2="94" changelist="83d39eee-8b44-466b-a8dc-686ae7f73d0b" />
-        <range start1="69" end1="70" start2="95" end2="96" changelist="83d39eee-8b44-466b-a8dc-686ae7f73d0b" />
-        <range start1="79" end1="80" start2="105" end2="106" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
-        <range start1="83" end1="84" start2="109" end2="110" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
-        <range start1="89" end1="90" start2="115" end2="115" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
-        <range start1="109" end1="110" start2="134" end2="136" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
-        <range start1="114" end1="115" start2="140" end2="141" changelist="83d39eee-8b44-466b-a8dc-686ae7f73d0b" />
-        <range start1="116" end1="117" start2="142" end2="143" changelist="83d39eee-8b44-466b-a8dc-686ae7f73d0b" />
-        <range start1="127" end1="131" start2="153" end2="160" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
-        <range start1="135" end1="136" start2="164" end2="165" changelist="83d39eee-8b44-466b-a8dc-686ae7f73d0b" />
-        <range start1="137" end1="138" start2="166" end2="167" changelist="83d39eee-8b44-466b-a8dc-686ae7f73d0b" />
-        <range start1="139" end1="140" start2="168" end2="169" changelist="83d39eee-8b44-466b-a8dc-686ae7f73d0b" />
-        <range start1="147" end1="148" start2="176" end2="177" changelist="83d39eee-8b44-466b-a8dc-686ae7f73d0b" />
-        <range start1="149" end1="150" start2="178" end2="179" changelist="83d39eee-8b44-466b-a8dc-686ae7f73d0b" />
-        <range start1="156" end1="156" start2="185" end2="292" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
-        <range start1="157" end1="158" start2="293" end2="294" changelist="83d39eee-8b44-466b-a8dc-686ae7f73d0b" />
-        <range start1="169" end1="170" start2="305" end2="306" changelist="83d39eee-8b44-466b-a8dc-686ae7f73d0b" />
-        <range start1="177" end1="182" start2="313" end2="318" changelist="83d39eee-8b44-466b-a8dc-686ae7f73d0b" />
-        <range start1="239" end1="239" start2="375" end2="428" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
+        <range start1="1" end1="1" start2="1" end2="3" changelist="83d39eee-8b44-466b-a8dc-686ae7f73d0b" />
+        <range start1="5" end1="6" start2="7" end2="8" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
+        <range start1="17" end1="18" start2="19" end2="19" changelist="83d39eee-8b44-466b-a8dc-686ae7f73d0b" />
+        <range start1="97" end1="97" start2="98" end2="100" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
+        <range start1="107" end1="108" start2="110" end2="111" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
+        <range start1="163" end1="164" start2="166" end2="166" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
+        <range start1="170" end1="171" start2="172" end2="178" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
+        <range start1="179" end1="180" start2="186" end2="186" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
+        <range start1="205" end1="206" start2="211" end2="211" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
+        <range start1="210" end1="211" start2="215" end2="215" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
+        <range start1="215" end1="216" start2="219" end2="220" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
+        <range start1="221" end1="223" start2="225" end2="225" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
+        <range start1="227" end1="228" start2="229" end2="231" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
+        <range start1="260" end1="261" start2="263" end2="264" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
+        <range start1="267" end1="270" start2="270" end2="282" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
+        <range start1="271" end1="272" start2="283" end2="283" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
+        <range start1="277" end1="277" start2="288" end2="290" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
+        <range start1="278" end1="280" start2="291" end2="292" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
+        <range start1="282" end1="284" start2="294" end2="295" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
+        <range start1="288" end1="289" start2="299" end2="299" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
+        <range start1="292" end1="293" start2="302" end2="302" changelist="150c66bb-8409-47cf-af8d-2119e6d38af4" />
+        <range start1="297" end1="298" start2="306" end2="307" changelist="b76aea0d-e23e-4fc0-bf0c-955ebde47444" />
+        <range start1="312" end1="312" start2="321" end2="327" changelist="83d39eee-8b44-466b-a8dc-686ae7f73d0b" />
       </ranges>
     </file>
   </component>
@@ -73,13 +68,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -102,7 +97,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1651768871106</updated>
-      <workItem from="1651768872728" duration="16968000" />
+      <workItem from="1651768872728" duration="18560000" />
+      <workItem from="1651875118744" duration="9125000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1651777260531</created>
@@ -111,7 +107,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651777260531</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="First Commit">
+      <created>1651803479322</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651803479322</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Changes by FUDEU">
+      <created>1651803519182</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1651803519182</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +140,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
+    <MESSAGE value="Changes by FUDEU" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by FUDEU" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>193</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
