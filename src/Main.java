@@ -303,7 +303,7 @@ public class Main {
         System.out.printf("Listando produtos do tipo %s%n", tipo );
         for (int i = 0; i < contadorItens; i++) {
             if (produtos[i][TIPO].equals(tipo)) {
-                System.out.print(produtos[i][MARCA] + " ");
+                System.out.print(produtos[i][NOME] + " ");
             }
         }
         System.out.println();
