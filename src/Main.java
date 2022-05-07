@@ -1,4 +1,6 @@
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
@@ -14,7 +16,6 @@ public class Main {
             menu();
         } while (true);
     }
-
 
     public static void menu() {
 
@@ -317,6 +318,12 @@ public class Main {
             }
         }
         return novoArray;
+    }
+
+    private static void imprimirTempoFormatado(Object lista){
+        LocalDateTime batata = (LocalDateTime) lista;
+        DateTimeFormatter tempoFormato = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+        System.out.print(batata.format(tempoFormato)+ "\t ");
     }
 }
 
